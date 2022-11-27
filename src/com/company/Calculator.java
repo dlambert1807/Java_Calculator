@@ -1,6 +1,7 @@
 package com.company;
 import java.util.Scanner;
 
+// Given an input in the form 'a + b + c' (or '/*-') for number 1-10, calculates the output.
 public class Calculator {
 
     public static void main(String[] args) {
@@ -12,12 +13,13 @@ public class Calculator {
         String[] calc;
         calc = Parser.inputToArray(equation);
         int finalAns = arrayCalc(calc);
+        System.out.println("Output:");
         System.out.println(finalAns);
     }
 
     //Takes an array of Strings and turns them into integers and characters that can be used in equations.
     public static int arrayCalc(String[] calc) {
-        int ans = 0;
+        int ans;
         int num1 = Integer.parseInt(calc[0]);
         char symb1 = calc[1].charAt(0);
         int num2 = Integer.parseInt(calc[2]);
